@@ -15,7 +15,7 @@ defmodule <%= @project_name_camel_case %>.Mixfile do
   @sources [
     "."
     # "lib",
-    # "<%= @project_name_camel_case %>",
+    # "<%= @project_name %>",
     # "test/support",
   ]
 
