@@ -9,12 +9,26 @@ defmodule GenTemplateComponent.Mixfile do
     {:ex_doc, ">0.0.0", only: [:dev, :test]}
   ]
 
-  @maintainers ["Your Name <youe@example.com>"]
-  @github "https://github.com/•••/#{@name}"
+  @maintainers ["Andrew Forward <aforward@gmail.com>"]
+  @github "https://github.com/aforward/#{@name}"
+  @home @github
 
   @description """
-  What your template does (less than 300 characters)
+  A template for building Elixir components (projects that hold state).
+
+  This project is an extremely paired down version of `mix new «project_name» --sup`
+  based on Dave Thomas' view of simplifying our Elixir code.  Let's see
+  how this plays out.
   """
+
+  @docs [
+    main: "GenTemplateComponent",
+    extras: ["README.md"]
+  ]
+
+  @aliases [
+  ]
+
 
   # ------------------------------------------------------------
 
@@ -25,8 +39,12 @@ defmodule GenTemplateComponent.Mixfile do
       app: @name,
       version: @version,
       deps: @deps,
-      elixir: "~> 1.4",
+      aliases: @aliases,
+      elixir: "~> 1.6",
       package: package(),
+      source_url: @github,
+      homepage_url: @home,
+      docs: @docs,
       description: @description,
       build_embedded: in_production,
       start_permanent: in_production
@@ -36,7 +54,15 @@ defmodule GenTemplateComponent.Mixfile do
   defp package do
     [
       name: @name,
-      files: ["lib", "mix.exs", "README.md", "LICENSE.md", "template"],
+      files: [
+        "lib",
+        "mix.exs",
+        "README.md",
+        "LICENSE.md",
+        "template",
+        "template/$PROJECT_NAME$/.gitignore",
+        "template/$PROJECT_NAME$/.formatter.exs"
+      ],
       maintainers: @maintainers,
       licenses: ["Apache 2.0"],
       links: %{
