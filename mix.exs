@@ -6,6 +6,7 @@ defmodule GenTemplateComponent.Mixfile do
 
   @deps [
     {:mix_templates, ">0.0.0", app: false},
+    {:version_tasks, "~> 0.11"},
     {:ex_doc, ">0.0.0", only: [:dev, :test]}
   ]
 
@@ -26,9 +27,7 @@ defmodule GenTemplateComponent.Mixfile do
     extras: ["README.md"]
   ]
 
-  @aliases [
-  ]
-
+  @aliases []
 
   # ------------------------------------------------------------
 
