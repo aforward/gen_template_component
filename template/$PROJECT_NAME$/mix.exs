@@ -10,8 +10,7 @@ defmodule <%= @project_name_camel_case %>.Mixfile do
     # { :my_app:  path: "../my_app" },
   ]
 
-  @aliases [
-  ]
+  @aliases []
 
   # ------------------------------------------------------------
 
