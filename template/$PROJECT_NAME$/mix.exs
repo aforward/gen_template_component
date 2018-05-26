@@ -6,17 +6,11 @@ defmodule <%= @project_name_camel_case %>.Mixfile do
 
   @deps [
     # { :earmark, ">0.1.5" },
-    # { :ex_doc,  "1.2.3", only: [ :dev, :test ] }
+    # { :ex_doc,  "1.2.3", only: [ :dev, :test ] },
     # { :my_app:  path: "../my_app" },
   ]
 
-  @aliases []
-
-  @sources [
-    "."
-    # "lib",
-    # "<%= @project_name %>",
-    # "test/support",
+  @aliases [
   ]
 
   # ------------------------------------------------------------
@@ -30,7 +24,7 @@ defmodule <%= @project_name_camel_case %>.Mixfile do
       elixir: ">= <%= @elixir_version %>",
       deps: @deps,
       aliases: @aliases,
-      elixirc_paths: @sources,
+      elixirc_paths: ["lib"],
       build_embedded: in_production
     ]
   end
